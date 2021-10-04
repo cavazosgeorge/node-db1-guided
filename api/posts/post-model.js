@@ -37,5 +37,7 @@ async function update(id, changes) {
 }
 
 async function remove() {
-  return 'delete wired'
+  // delete from posts
+  // where id = 3;
+  return db('posts')
 }

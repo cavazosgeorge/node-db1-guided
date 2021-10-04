@@ -22,8 +22,8 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', checkId, async (req, res, next) => {
   try {
-    const posts = await Post.getById(req.params.id)
-    res.json(posts)
+    const post = await Post.getById(req.params.id)
+    res.json(post)
   } catch (err) {
     next(err)
   }

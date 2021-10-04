@@ -30,9 +30,10 @@ async function create(post) {
 
 async function update(id, changes) {
   // update posts set title= 'foo', contents = 'bar' where id = 1;
-  const numOfUpdatedRows = await db('posts')
+  await db('posts')
     .update(changes)
     .where('id', id)
+  return getById(id)
 }
 
 async function remove() {

@@ -30,7 +30,9 @@ async function create(post) {
 
 async function update() {
   // update posts set title= 'foo', contents = 'bar' where id = 1;
-  return 'update wired'
+  return db('posts')
+    .update(changes)
+    .where('id', id)
 }
 
 async function remove() {

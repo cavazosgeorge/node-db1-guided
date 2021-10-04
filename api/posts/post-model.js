@@ -8,9 +8,9 @@ module.exports = {
   remove,
 }
 
-async function get() {
+function get() {
   // select * from posts;
-  return 'get wired'
+  return db('posts')
 }
 
 async function getById() {

@@ -7,7 +7,7 @@ module.exports = {
 }
 
 async function get() {
-  // 
+  // select * from posts;
   return 'get wired'
 }
 

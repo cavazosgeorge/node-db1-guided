@@ -39,7 +39,9 @@ async function update(id, changes) {
 async function remove(id) {
   // delete from posts
   // where id = 3;
-  return db('posts')
+  const chopped = await getById(id)
+  await db('posts')
     .where('id', id)
     .delete()
+  return chopped
 }

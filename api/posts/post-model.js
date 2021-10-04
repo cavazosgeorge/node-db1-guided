@@ -16,7 +16,7 @@ function get() {
 
 async function getById() {
   // select * from posts where id = 4;
-  return 'getById wired'
+  return db('posts').where('id', )
 }
 
 async function create() {

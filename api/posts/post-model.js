@@ -18,7 +18,7 @@ function getById(id) {
   // select * from posts where id = 4;
   return db('posts')
     .where('id', id)
-    .first()
+    // .first()
 }
 
 async function create() {

@@ -36,8 +36,10 @@ async function update(id, changes) {
   return getById(id)
 }
 
-async function remove() {
+async function remove(id) {
   // delete from posts
   // where id = 3;
   return db('posts')
+    .where('id', id)
+    .delete()
 }

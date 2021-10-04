@@ -13,8 +13,8 @@ function checkPayload(req, res, next) {
 
 router.get('/', async (req, res, next) => {
   try {
-    const data = await Post.get()
-    res.json(data)
+    const posts = await Post.get()
+    res.json(posts)
   } catch (err) {
     next(err)
   }

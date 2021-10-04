@@ -21,9 +21,10 @@ function getById(id) {
     .first()
 }
 
-async function create() {
-  // insert ins
-  return 'create wired'
+async function create(post) {
+  // insert into posts (title, contents) values ('newtitle', 'newvalue')
+  return db('posts')
+    .insert(post)
 }
 
 async function update() {

@@ -11,7 +11,7 @@ module.exports = {
 function get() {
   // select * from posts;
   return db('posts')
-  .select('id', 'title', '')
+  .select('id', 'title', 'contents')
 }
 
 async function getById() {

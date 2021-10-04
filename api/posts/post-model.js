@@ -23,9 +23,9 @@ function getById(id) {
 
 async function create(post) {
   // insert into posts (title, contents) values ('newtitle', 'newvalue')
-  const arrayOfIds = await db('posts')
+  const [id] = await db('posts')
     .insert(post)
-  return getById(arrayOfIds[0])
+  return getById(id)
 }
 
 async function update() {

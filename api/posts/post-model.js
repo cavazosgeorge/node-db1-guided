@@ -22,7 +22,7 @@ function getById(id) {
 }
 
 async function create() {
-  // ?????
+  // insert ins
   return 'create wired'
 }
 

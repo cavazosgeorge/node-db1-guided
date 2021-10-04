@@ -16,10 +16,7 @@ function get() {
 
 function getById(id) {
   // select * from posts where id = 4;
-  return db('posts').where({
-    id: id,
-    title: 'foo'
-  })
+  return db('posts').where('id', id)
 }
 
 async function create() {

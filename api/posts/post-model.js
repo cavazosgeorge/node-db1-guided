@@ -11,7 +11,7 @@ module.exports = {
 function get() {
   // select * from posts;
   return db('posts')
-  .select('id', 'title', 'contents')
+    .select('id', 'title', 'contents')
 }
 
 function getById(id) {
@@ -23,8 +23,9 @@ function getById(id) {
 
 async function create(post) {
   // insert into posts (title, contents) values ('newtitle', 'newvalue')
-  return db('posts')
+  const arrayOfids = await db('posts')
     .insert(post)
+  return getById()
 }
 
 async function update() {

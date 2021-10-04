@@ -28,7 +28,7 @@ async function create(post) {
   return getById(id)
 }
 
-async function update() {
+async function update(id, changes) {
   // update posts set title= 'foo', contents = 'bar' where id = 1;
   return db('posts')
     .update(changes)

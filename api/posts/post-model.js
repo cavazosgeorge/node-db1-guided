@@ -14,9 +14,12 @@ function get() {
   .select('id', 'title', 'contents')
 }
 
-async function getById() {
+function getById(id) {
   // select * from posts where id = 4;
-  return db('posts').where('id', )
+  return db('posts').where({
+    id: id,
+    title: 'foo'
+  })
 }
 
 async function create() {
